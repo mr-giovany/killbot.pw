@@ -1,4 +1,4 @@
-## Wrapper for KILLBOT.PW
+# Wrapper for KILLBOT.PW
 
 installing dependency by typing:
 
