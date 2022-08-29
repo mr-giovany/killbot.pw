@@ -1,0 +1,17 @@
+name: "synching latest commit to packagist"
+
+on: ["push"]
+
+jobs:
+  push:
+    runs-on: ubuntu-20.04
+    name: "synching latest commit to packagist"
+    steps:
+      - uses: fjogeleit/http-request-action@v1
+        env:
+          PACKAGIST_API_TOKEN: ${{ secrets.PACKAGIST_API_TOKEN }}
+        name: "Post HTTP to packagist"
+        with:
+          url: https://packagist.org/api/github?username=sixshop&apiToken="$env:PACKAGIST_API_TOKEN"
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"repository":{"url":"https://packagist.org/packages/kgsdev/killbot.pw"}}'
