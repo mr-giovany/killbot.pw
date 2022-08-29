@@ -1,0 +1,21 @@
+{
+    "name": "kgsdev/killbot.pw",
+    "description": "Wrapper for killbot.pw",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Kgsdev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ghofur Giovany",
+            "email": "ghofurgiovany@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^9.26",
+        "laravel/helpers": "^1.5"
+    }
+}
